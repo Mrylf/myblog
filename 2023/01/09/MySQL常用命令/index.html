@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/01/03/docker安装/"/>
+  <link rel="canonical" href="http://example.com/2023/01/09/mysql常用命令/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Docker安装 - shell blog</title>
-  <meta name="keywords" content="Docker,null">
+  <title>MySQL常用命令 - shell blog</title>
+  <meta name="keywords" content="MySQL常用命令,null">
   <meta desc name="description" content="一个萌新分享自己仅存的技术的地方 - sheep - shell blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker安装">
-<meta property="og:url" content="http://example.com/2023/01/03/Docker%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:title" content="MySQL常用命令">
+<meta property="og:url" content="http://example.com/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="shell blog">
-<meta property="og:description" content="CentOS Docker 安装使用官方安装脚本自动安装安装命令如下： 1curl -fsSL https:&#x2F;&#x2F;get.docker.com | bash -s docker --mirror Aliyun  也可以使用国内 daocloud 一键安装命令： 1curl -sSL https:&#x2F;&#x2F;get.daocloud.io&#x2F;docker | sh  手动安装卸载旧版本较旧的 Docker 版本">
+<meta property="og:description" content="进行登录 123mysql -hlocalhost -P3306 -uroot -p#或者mysql -uroot -p    查看MySQL相关信息 1status;    查看数据库 1show databases;    创建数据库 1create database 数据库名;    删除数据库 1drop database 数据库名;    使用某个数据库 1use 数据库名;    查">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-01-03T03:59:36.000Z">
-<meta property="article:modified_time" content="2023-01-03T04:00:26.681Z">
+<meta property="article:published_time" content="2023-01-09T02:06:14.000Z">
+<meta property="article:modified_time" content="2023-01-09T02:22:53.994Z">
 <meta property="article:author" content="sheep">
-<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="MySQL常用命令">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2344,7 +2344,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/03/Docker安装/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/09/MySQL常用命令/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="shell blog">
   </span>
@@ -2365,7 +2365,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Docker安装
+        MySQL常用命令
       </h1>
       <div class='new-meta-box'>
         
@@ -2384,10 +2384,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Docker%E5%AD%A6%E4%B9%A0/">Docker学习</a>
+    <a class="category-link" href="/categories/MySQL/">MySQL</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Docker%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">Docker学习</span></a>
+        <a href="/categories/MySQL/" itemprop="url"><span itemprop="name">MySQL</span></a>
       </span>
     
   </div>
@@ -2396,10 +2396,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-01-03T11:59:36+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-01-09T10:06:14+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年1月3日</p>
+    <p>发布于：2023年1月9日</p>
   </a>
 </div>
 
@@ -2422,50 +2422,320 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="CentOS-Docker-安装"><a href="#CentOS-Docker-安装" class="headerlink" title="CentOS Docker 安装"></a>CentOS Docker 安装</h2><h3 id="使用官方安装脚本自动安装"><a href="#使用官方安装脚本自动安装" class="headerlink" title="使用官方安装脚本自动安装"></a>使用官方安装脚本自动安装</h3><p>安装命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure>
+    <ul>
+<li><p>进行登录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -hlocalhost -P3306 -uroot -p</span><br><span class="line">#或者</span><br><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
 
-<p>也可以使用国内 daocloud 一键安装命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh</span><br></pre></td></tr></table></figure>
 
-<h3 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h3><h4 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h4><p>较旧的 Docker 版本称为 docker 或 docker-engine 。如果已安装这些程序，则需要卸载它们以及相关的依赖项。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看MySQL相关信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">status;</span><br></pre></td></tr></table></figure>
 
-<h4 id="安装-Docker-Engine-Community"><a href="#安装-Docker-Engine-Community" class="headerlink" title="安装 Docker Engine-Community"></a>安装 Docker Engine-Community</h4><h5 id="使用-Docker-仓库进行安装"><a href="#使用-Docker-仓库进行安装" class="headerlink" title="使用 Docker 仓库进行安装"></a>使用 Docker 仓库进行安装</h5><p>在新主机上首次安装 Docker Engine-Community 之前，需要设置 Docker 仓库。之后，可以从仓库安装和更新 Docker。</p>
-<h5 id="设置仓库"><a href="#设置仓库" class="headerlink" title="设置仓库"></a>设置仓库</h5><p>安装所需的软件包。yum-utils 提供了 yum-config-manager ，并且 device mapper 存储驱动程序需要 device-mapper-persistent-data 和 lvm2。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils \</span><br><span class="line">  device-mapper-persistent-data \</span><br><span class="line">  lvm2</span><br></pre></td></tr></table></figure>
 
-<p>使用以下命令来设置稳定的仓库。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用官方源地址（比较慢）</span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
 
-<p>可以选择国内的一些源地址：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">阿里云</span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">清华大学源</span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名;</span><br></pre></td></tr></table></figure>
 
-<h4 id="安装-Docker-Engine-Community-1"><a href="#安装-Docker-Engine-Community-1" class="headerlink" title="安装 Docker Engine-Community"></a>安装 Docker Engine-Community</h4><p>安装最新版本的 Docker Engine-Community 和 containerd</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br></pre></td></tr></table></figure>
 
-<p>要安装特定版本的 Docker Engine-Community，请在存储库中列出可用版本，然后选择并安装：</p>
-<ul>
-<li>列出并排序您存储库中可用的版本。此示例按版本号（从高到低）对结果进行排序。</li>
+</li>
+<li><p>删除数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 数据库名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>使用某个数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看当前MySQL服务实例支持的字符序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show collation;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看当前MySQL服务实例使用的字符集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &#x27;character%&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看当前MySQL服务实例支持的字符集、字符集默认的字符序以及字符集占用的最大字节长度等信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show character set;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看数据库的相关信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create database 数据库名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>修改密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set password for root@localhost = password(‘123’);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>创建某字符集数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名 default character set utf8 collate utf8_general_ci;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看MySQL服务实例支持的存储引擎</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show engines;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>“临时地”将MySQL“当前会话的”存储引擎设置为MyISAM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set default_storage_engine=MyISAM;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">describe tablename;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看表内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看数据库版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select version();</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看服务器当前时间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select current_time;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE `数据库名` CHARACTER SET &#x27;utf8&#x27; COLLATE &#x27;utf8_general_ci&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>创建表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `表名`  (</span><br><span class="line">  `id` int NOT NULL,</span><br><span class="line">  `name` varchar(255) NOT NULL,</span><br><span class="line">  ……,</span><br><span class="line">  PRIMARY KEY (`主键名`)</span><br><span class="line">) engine =InnoDB default charset =utf8;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>将服务器内存中的数据刷新到数据库文件中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush tables with read lock;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>利用mysqldump转存数据库，进入bin目录后输入以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump  -uroot  -proot &gt; sheep.sql</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看生成的备份的sql文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>备份数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前二进制状态</span><br><span class="line">show master status;</span><br><span class="line"></span><br><span class="line"># 锁定数据库</span><br><span class="line">lock tables student read;</span><br><span class="line"></span><br><span class="line"># 导出数据</span><br><span class="line">select * into outfile ‘student.bat’ from student;</span><br><span class="line"></span><br><span class="line"># 备份后解锁</span><br><span class="line">unlock tables;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>备份多个数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump  -uroot  -proot  --databases 数据库名1 数据库名2 &gt; sheep.sql</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>备份所有数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump  -uroot  -proot  -all -databases &gt; all.sql</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>恢复数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 为表增加一个写锁</span><br><span class="line">lock tables student write;</span><br><span class="line"></span><br><span class="line">load data infile ‘student.bak’ -&gt;replace into table student;</span><br><span class="line"></span><br><span class="line">load data low_priority infile ‘student.bak’ -&gt;replace into table student;</span><br><span class="line"></span><br><span class="line"># 解锁</span><br><span class="line">unlock tables;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>在进入到MySQL后，创建一个数据库然后利用此数据库导入现有的sql文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># source后跟的是sql文件地址，注意要用反斜杠</span><br><span class="line">source  E:\\sheep.sql;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>使用load data 倒入数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load data  local infile ‘E:\sheep.txt’ into table student character set utf8;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>更改字符集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set character_set_database=utf8;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查看建表信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table 表名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>设置复合主键</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">primary key (字段名1, 字段名2);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>设置外键</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foreign key(子表的外键字段) references 父表的表名 (父表的主键的字段名);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>复制一个表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table 新表名 select * from 源表;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>删除字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop 字段名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>添加新字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add 新字段名 新数据类型 新约束条件;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>修改字段名（或者数据类型）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 change 旧字段名 新字段名 新数据类型;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>仅对字段的数据类型进行修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 modify 字段名 新数据类型;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>修改数据库字符集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter database 数据库名 character set =utf8;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>修改表的字符集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 character set = utf8;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>添加约束条件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add constraint 约束名 约束类型 (字段名);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>添加外键</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 子表的数据表名 add foreign key(子表的外键名称) references 父表的数据表名称 (父表的主键名称);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>删除约束条件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop primary key;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>删除唯一性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 DROP INDEX 字段名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>删除表的外键约束</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop foreign key 约束名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>修改表名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rename table 旧表名 to 新表名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>插入数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 [(字段列表)]  values (值列表);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名1，字段名2，...，字段名n  from 表名where 查询条件;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>复合查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段1，...，字段n from 表名where 查询条件1 and 查询条件2 and...and 查询条件n;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>指定范围查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段1...，字段n from 表名where 查询条件[not] between 开始值 and 结束值;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>模糊查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段 from 表 where 某字段 like 条件;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>空值查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名 where 字段名 is null;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>使用聚合函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select COUNT()/SUM()/AVG()/MAX()/MIN() from 表名;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>分组查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段1，字段2 from 表名 group by 字段 having 条件语句;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查询结果显示前几行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名 limit 行数;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>降序排序输出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名 order by 字段 desc;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>内连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段1，字段2…. from  表1  inner join 表2  on  表1和表2之间的连接条件;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>左外连接查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select  字段列表 from  表1  left  join 表2  on  表1和表2之间的连接条件;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>右外连接查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段 from  表1  right  join  表2  on  表1和表2之间的连接条件;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>使用exits关键字的子查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名 from 表名1 where exists (select 字段 from 表名2 where 条件);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>使用in或者not in关键字的子查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名1 from 表名1 where 字段名2 in (select 字段2 from 表名2);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>使用any 或者all进行子查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表达式 &gt; any(子查询)</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum list docker-ce --showduplicates | sort -r</span><br><span class="line"></span><br><span class="line">docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable</span><br><span class="line">docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable</span><br><span class="line">docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable</span><br><span class="line">docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>通过其完整的软件包名称安装特定版本，该软件包名称是软件包名称（docker-ce）加上版本字符串（第二列），从第一个冒号（:）一直到第一个连字符，并用连字符（-）分隔。例如：docker-ce-18.09.1</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io</span><br></pre></td></tr></table></figure>
-
-<h4 id="启动-Docker"><a href="#启动-Docker" class="headerlink" title="启动 Docker"></a>启动 Docker</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h4 id="通过运行-hello-world-镜像来验证是否正确安装了-Docker-Engine-Community"><a href="#通过运行-hello-world-镜像来验证是否正确安装了-Docker-Engine-Community" class="headerlink" title="通过运行 hello-world 镜像来验证是否正确安装了 Docker Engine-Community"></a>通过运行 hello-world 镜像来验证是否正确安装了 Docker Engine-Community</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure>
-
-<h3 id="卸载-docker"><a href="#卸载-docker" class="headerlink" title="卸载 docker"></a>卸载 docker</h3><p>删除安装包：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker-ce</span><br></pre></td></tr></table></figure>
-
-<p>删除镜像、容器、配置文件等内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /var/lib/docker</span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -2490,10 +2760,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-03T12:00:26+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-09T10:22:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年1月3日</p>
+    <p>更新于：2023年1月9日</p>
   </a>
 </div>
 
@@ -2502,8 +2772,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Docker/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Docker</p></a></div>
-  <span hidden itemprop="keywords">Docker</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL常用命令</p></a></div>
+  <span hidden itemprop="keywords">MySQL常用命令</span>
 
 
         
@@ -2516,7 +2786,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/01/03/Docker%E5%AE%89%E8%A3%85/&title=Docker安装 - shell blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/&title=MySQL常用命令 - shell blog&summary="
           
           >
           
@@ -2528,7 +2798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/01/03/Docker%E5%AE%89%E8%A3%85/&title=Docker安装 - shell blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/&title=MySQL常用命令 - shell blog&summary="
           
           >
           
@@ -2540,7 +2810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/01/03/Docker%E5%AE%89%E8%A3%85/&title=Docker安装 - shell blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/&title=MySQL常用命令 - shell blog&summary="
           
           >
           
@@ -2573,29 +2843,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>MySQL常用命令</p>
-          <p class='content'>
-进行登录
-123mysql -hlocalhost -P3306 -uroot -p#或者mysql -uroot -p
-
-
-
-查看MySQL相关信息
-1status;
-
-
-
-查看数据库
-1s...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/01/02/Docker%E7%AE%80%E4%BB%8B/'>
-          <p class='title'>Docker简介<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1.什么是容器容器可以看作是一个简易的沙箱,程序再沙箱中运行,可以不用在意外界环境,容器将外界和运行程序相隔离
-
-2.为什么会出现docker在开发过程,您使用了一台笔记本开发应用程序,这时你的...</p>
+        <a class='next' href='/2023/01/03/Docker%E5%AE%89%E8%A3%85/'>
+          <p class='title'>Docker安装<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>CentOS Docker 安装使用官方安装脚本自动安装安装命令如下：
+1curl -fsSL https://get.docker.com | bash -s docker --mirror ...</p>
         </a>
       
     </div>
@@ -2611,7 +2863,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/01/03/Docker%E5%AE%89%E8%A3%85/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2643,19 +2895,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS-Docker-%E5%AE%89%E8%A3%85"><span class="toc-text">CentOS Docker 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="toc-text">使用官方安装脚本自动安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="toc-text">手动安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E6%97%A7%E7%89%88%E6%9C%AC"><span class="toc-text">卸载旧版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Docker-Engine-Community"><span class="toc-text">安装 Docker Engine-Community</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Docker-%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85"><span class="toc-text">使用 Docker 仓库进行安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%BB%93%E5%BA%93"><span class="toc-text">设置仓库</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Docker-Engine-Community-1"><span class="toc-text">安装 Docker Engine-Community</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-Docker"><span class="toc-text">启动 Docker</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E8%BF%90%E8%A1%8C-hello-world-%E9%95%9C%E5%83%8F%E6%9D%A5%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE%E5%AE%89%E8%A3%85%E4%BA%86-Docker-Engine-Community"><span class="toc-text">通过运行 hello-world 镜像来验证是否正确安装了 Docker Engine-Community</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD-docker"><span class="toc-text">卸载 docker</span></a></li></ol></li></ol>
-    </div>
-  </section>
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -3298,7 +3540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Docker学习/","name":"Docker学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/01/03/Docker安装/","name":"Docker安装"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Docker安装","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/01/03/Docker%E5%AE%89%E8%A3%85/"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/01/03/Docker%E5%AE%89%E8%A3%85/","wordCount":0,"datePublished":"2023-01-03T03:59:36.000Z","dateModified":"2023-01-03T04:00:26.681Z","articleSection":"Docker学习","keywords":"Docker","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/MySQL/","name":"MySQL"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/01/09/MySQL常用命令/","name":"MySQL常用命令"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MySQL常用命令","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/","wordCount":0,"datePublished":"2023-01-09T02:06:14.000Z","dateModified":"2023-01-09T02:22:53.994Z","articleSection":"MySQL","keywords":"MySQL常用命令","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
