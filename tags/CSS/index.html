@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2022/12/"/>
+  <link rel="canonical" href="http://example.com/tags/css/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,13 +31,13 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2022/12 - shell blog</title>
+  <title>标签：CSS - shell blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="一个萌新分享自己仅存的技术的地方 - sheep - shell blog">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="shell blog">
-<meta property="og:url" content="http://example.com/archives/2022/12/index.html">
+<meta property="og:url" content="http://example.com/tags/CSS/index.html">
 <meta property="og:site_name" content="shell blog">
 <meta property="og:description" content="一个萌新分享自己仅存的技术的地方">
 <meta property="og:locale" content="zh_CN">
@@ -2339,9 +2339,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class=''>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
@@ -2355,7 +2357,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/25/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/16/高度塌陷问题/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="shell blog">
   </span>
@@ -2373,17 +2375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/12/25/hello-world/"  itemprop="url">
-        Hello World
+      <a href="/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/"  itemprop="url">
+        高度塌陷问题
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        本来是想把这篇自带的文章删除的，后来想想还是算了，当留个纪念。
+        前言
+在浮动布局中，父元素的高度默认是被子元素撑开的，当子元素浮动后，其会从文档流中脱离。将会无法撑起父元素的高度，从而导致父元素的高度丢失。
+父元素高度丢失后，其下的元素就会自动上移，从而导致页面的布局混乱。所以高度塌陷是浮动布局中比较常见的一个问题。
 
-Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshootin...
+示例图：
+
+两种解决办法
+
+使用after伪类解决
+- 给塌陷的父元素设置after伪类
+
+- 因为after伪类的content为行内...
       
     
   </div>
@@ -2391,12 +2402,20 @@ Welcome to Hexo! This is your very first post. Check documentation for more info
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-12-25T11:56:25+08:00">2022-12-25</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-02-16T13:16:34+08:00">2023-02-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
+            </span>
+          
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/12/25/hello-world/' itemprop="url">
+          <a class='readmore' href='/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2416,7 +2435,8 @@ Welcome to Hexo! This is your very first post. Check documentation for more info
   
 
 
-	
+    
+  
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3226,7 +3246,7 @@ Welcome to Hexo! This is your very first post. Check documentation for more info
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://example.com/archives/2022/12/","name":"12月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/CSS/","name":"CSS"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
