@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/02/16/高度塌陷问题/"/>
+  <link rel="canonical" href="http://example.com/2023/02/19/bfc/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,19 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>高度塌陷问题 - shell blog</title>
+  <title>BFC - shell blog</title>
   <meta name="keywords" content="CSS,null">
   <meta desc name="description" content="一个萌新分享自己仅存的技术的地方 - sheep - shell blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="高度塌陷问题">
-<meta property="og:url" content="http://example.com/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="BFC">
+<meta property="og:url" content="http://example.com/2023/02/19/BFC/index.html">
 <meta property="og:site_name" content="shell blog">
-<meta property="og:description" content="前言 在浮动布局中，父元素的高度默认是被子元素撑开的，当子元素浮动后，其会从文档流中脱离。将会无法撑起父元素的高度，从而导致父元素的高度丢失。 父元素高度丢失后，其下的元素就会自动上移，从而导致页面的布局混乱。所以高度塌陷是浮动布局中比较常见的一个问题。  示例图：  两种解决办法  使用after伪类解决 - 给塌陷的父元素设置after伪类  - 因为after伪类的content为行内元素输">
+<meta property="og:description" content="BFC到底是什么东西 BFC（Block Formatting Context）块级格式化上下文 BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独立的布局区域 元素开启BFC后的特点：  开启BFC的元素不会被浮动元素所覆盖 开启BFC的元素子元素和父元素外边距不会重叠 开启BFC的元素可以包含浮动的子元素   BFC的规则  BFC就是一个块级元素，块级元素会在垂直方向一个接一个">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-02-16T05:16:34.000Z">
-<meta property="article:modified_time" content="2023-02-16T05:41:34.919Z">
+<meta property="article:published_time" content="2023-02-19T01:23:14.000Z">
+<meta property="article:modified_time" content="2023-02-19T01:42:33.624Z">
 <meta property="article:author" content="sheep">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -2344,7 +2344,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/16/高度塌陷问题/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/19/BFC/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="shell blog">
   </span>
@@ -2365,7 +2365,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        高度塌陷问题
+        BFC
       </h1>
       <div class='new-meta-box'>
         
@@ -2396,10 +2396,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-16T13:16:34+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-19T09:23:14+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年2月16日</p>
+    <p>发布于：2023年2月19日</p>
   </a>
 </div>
 
@@ -2422,30 +2422,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><blockquote>
-<p>在浮动布局中，父元素的高度默认是被子元素撑开的，当子元素浮动后，其会从文档流中脱离。将会无法撑起父元素的高度，从而导致父元素的高度丢失。</p>
-<p>父元素高度丢失后，其下的元素就会自动上移，从而导致页面的布局混乱。所以高度塌陷是浮动布局中比较常见的一个问题。</p>
+    <h3 id="BFC到底是什么东西"><a href="#BFC到底是什么东西" class="headerlink" title="BFC到底是什么东西"></a>BFC到底是什么东西</h3><blockquote>
+<p><em><strong>BFC（Block Formatting Context）块级格式化上下文</strong></em></p>
+<p>BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独立的布局区域</p>
+<p>元素开启BFC后的<strong>特点</strong>：</p>
+<ol>
+<li>开启BFC的元素不会被浮动元素所覆盖</li>
+<li>开启BFC的元素子元素和父元素外边距不会重叠</li>
+<li>开启BFC的元素可以包含浮动的子元素</li>
+</ol>
 </blockquote>
-<p><strong>示例图：</strong></p>
-<p><img src="https://s1.vika.cn/space/2023/02/16/4c32b0d37b914fbf9b57dd229f2537b9" class="lazyload" data-srcset="https://s1.vika.cn/space/2023/02/16/4c32b0d37b914fbf9b57dd229f2537b9" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="高度塌陷"></p>
-<h2 id="两种解决办法"><a href="#两种解决办法" class="headerlink" title="两种解决办法"></a><strong>两种解决办法</strong></h2><blockquote>
+<h3 id="BFC的规则"><a href="#BFC的规则" class="headerlink" title="BFC的规则"></a>BFC的规则</h3><blockquote>
 <ul>
-<li><p>使用after伪类解决</p>
-<pre><code>- 给塌陷的父元素设置after伪类
-
-- 因为after伪类的content为行内元素输出
-
-    如有特定需要，则要用display:block转换为块级元素
-
-- 最重要的一点是要用clear:both来清除浮动
-</code></pre>
+<li><p>BFC就是一个块级元素，块级元素会在垂直方向一个接一个的排列</p>
 </li>
-<li><p>将元素的overflow设置为一个非visible的值</p>
-<pre><code>- 常用方式：为元素设置overflow:hidden 开启其的BFC，使其可以包含浮动元素
-</code></pre>
+<li><p>BFC就是页面中的一个隔离的独立容器，容器里的标签不会影响到外部标签</p>
+</li>
+<li><p>垂直方向的距离由margin决定， 属于同一个BFC的两个相邻的标签外边距会发生重叠</p>
+</li>
+<li><p>计算BFC的高度时，浮动元素也参与计算</p>
+</li>
+<li><p>BFC的区域不会与float box重叠</p>
 </li>
 </ul>
 </blockquote>
+<h3 id="我们可以通过以下几种方式触发BFC"><a href="#我们可以通过以下几种方式触发BFC" class="headerlink" title="我们可以通过以下几种方式触发BFC"></a>我们可以通过以下几种方式触发BFC</h3><blockquote>
+<ol>
+<li>通过浮动触发：float（除none）</li>
+<li>.通过绝对\固定定位触发：position: absolute\ flxed</li>
+<li>通过display触发：display: inline-block\ flex\ table-cells</li>
+<li>通过overflow触发：overflow: hidden\ auto\ scroll</li>
+<li>处于body 根元素下也可以触发</li>
+</ol>
+</blockquote>
+<h3 id="BFC的特性及应用"><a href="#BFC的特性及应用" class="headerlink" title="BFC的特性及应用"></a>BFC的特性及应用</h3><blockquote>
+<p>在同一个BFC下，外边距会发生折叠</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>外边距折叠<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>外边距重叠：<img src="https://s1.vika.cn/space/2023/02/19/664c088c7e774309a498f9b63f23480a" class="lazyload" data-srcset="https://s1.vika.cn/space/2023/02/19/664c088c7e774309a498f9b63f23480a" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="外边距重叠"></p>
+<hr>
+<p><strong>如果想要避免外边距的重叠，可以将其放在不同的 BFC 容器中</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>外边距折叠<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">overflow</span>: auto;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>外边距不重叠：<img src="https://s1.vika.cn/space/2023/02/19/c40acbb61be24bbeb636bae800556c44" class="lazyload" data-srcset="https://s1.vika.cn/space/2023/02/19/c40acbb61be24bbeb636bae800556c44" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="避免外边距重叠"></p>
+<hr>
+<blockquote>
+<p><strong>清除浮动，解决高度塌陷的问题</strong></p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>高度塌陷问题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border</span>: <span class="number">10px</span> red solid;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box1</span><span class="selector-pseudo">::after</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">clear</span>: both;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box2</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: aquamarine;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box3</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border</span>: <span class="number">10px</span> red solid;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 解决高度塌陷 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box3&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 高度塌陷 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>示例图（上半部分为未塌陷）：<img src="https://s1.vika.cn/space/2023/02/19/b26b3341c8134ebf80f6d4e403079a23" class="lazyload" data-srcset="https://s1.vika.cn/space/2023/02/19/b26b3341c8134ebf80f6d4e403079a23" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="高度塌陷"></p>
+<hr>
+<blockquote>
+<p><strong>自适应两栏布局</strong></p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>自适应两栏布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.left</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: lightpink;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.right</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: lightsalmon;</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 通过float开启BFC */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改前：<img src="https://s1.vika.cn/space/2023/02/19/1ad112d608c7434c85173ffc0f7d3b97" class="lazyload" data-srcset="https://s1.vika.cn/space/2023/02/19/1ad112d608c7434c85173ffc0f7d3b97" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="修改前"></p>
+<p>修改后：<img src="https://s1.vika.cn/space/2023/02/19/3e8847df997b49c5adb316d02e342289" class="lazyload" data-srcset="https://s1.vika.cn/space/2023/02/19/3e8847df997b49c5adb316d02e342289" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="修改后"></p>
 
   </div>
   
@@ -2470,10 +2505,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-16T13:41:34+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-19T09:42:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年2月16日</p>
+    <p>更新于：2023年2月19日</p>
   </a>
 </div>
 
@@ -2496,7 +2531,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/&title=高度塌陷问题 - shell blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/02/19/BFC/&title=BFC - shell blog&summary="
           
           >
           
@@ -2508,7 +2543,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/&title=高度塌陷问题 - shell blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/02/19/BFC/&title=BFC - shell blog&summary="
           
           >
           
@@ -2520,7 +2555,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/&title=高度塌陷问题 - shell blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/02/19/BFC/&title=BFC - shell blog&summary="
           
           >
           
@@ -2553,30 +2588,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/02/19/BFC/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>BFC</p>
-          <p class='content'>BFC到底是什么东西
-BFC（Block Formatting Context）块级格式化上下文
-BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独立的布局区域
-元素开启BFC后的...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/01/09/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/'>
-          <p class='title'>MySQL常用命令<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-进行登录
-123mysql -hlocalhost -P3306 -uroot -p# 或者mysql -uroot -p
-
-
-
-查看MySQL相关信息
-1status;
-
-
-
-查看数据库
-1...</p>
+        <a class='next' href='/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/'>
+          <p class='title'>高度塌陷问题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>前言
+在浮动布局中，父元素的高度默认是被子元素撑开的，当子元素浮动后，其会从文档流中脱离。将会无法撑起父元素的高度，从而导致父元素的高度丢失。
+父元素高度丢失后，其下的元素就会自动上移，从而导致...</p>
         </a>
       
     </div>
@@ -2592,7 +2609,7 @@ BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独�
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/02/19/BFC/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2634,7 +2651,7 @@ BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">两种解决办法</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF"><span class="toc-text">BFC到底是什么东西</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E7%9A%84%E8%A7%84%E5%88%99"><span class="toc-text">BFC的规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E4%BB%A5%E4%B8%8B%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%E8%A7%A6%E5%8F%91BFC"><span class="toc-text">我们可以通过以下几种方式触发BFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-text">BFC的特性及应用</span></a></li></ol>
     </div>
   </section>
 
@@ -3275,7 +3292,7 @@ BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独�
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/02/16/高度塌陷问题/","name":"高度塌陷问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"高度塌陷问题","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/02/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/","wordCount":0,"datePublished":"2023-02-16T05:16:34.000Z","dateModified":"2023-02-16T05:41:34.919Z","articleSection":"前端","keywords":"CSS","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/02/19/BFC/","name":"BFC"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"BFC","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/02/19/BFC/"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/02/19/BFC/","wordCount":0,"datePublished":"2023-02-19T01:23:14.000Z","dateModified":"2023-02-19T01:42:33.624Z","articleSection":"前端","keywords":"CSS","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
