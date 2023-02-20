@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/categories/"/>
+  
+  <link rel="canonical" href="http://example.com/2023/02/20/css-position/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,20 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>所有分类 - shell blog</title>
-  <meta name="keywords" content="null">
+  <title>CSS Position - shell blog</title>
+  <meta name="keywords" content="CSS,null">
   <meta desc name="description" content="一个萌新分享自己仅存的技术的地方 - sheep - shell blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="所有分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Position">
+<meta property="og:url" content="http://example.com/2023/02/20/CSS-Position/index.html">
 <meta property="og:site_name" content="shell blog">
-<meta property="og:description" content="一个萌新分享自己仅存的技术的地方">
+<meta property="og:description" content="前言 position 属性指定了元素的定位类型 其属性的值有：static、relative、absolute、fixed、sticky 该元素可以使用的top，bottom，left和right属性定位 然而，这些属性无法单独使用，除非是先设定position属性 他们也有不同的生效方式，这取决于定位方法   static定位 static 是position属性的默认值 意思为“不开启定位”">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-12-26T04:42:41.331Z">
-<meta property="article:modified_time" content="2022-12-26T04:42:41.331Z">
+<meta property="article:published_time" content="2023-02-20T06:02:35.000Z">
+<meta property="article:modified_time" content="2023-02-20T06:07:50.492Z">
 <meta property="article:author" content="sheep">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2287,7 +2288,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper category search' style="display: ;">
+      <div id="half" class='cover-wrapper post search' style="display: ;">
         
   <div id="parallax-window"></div>
 
@@ -2341,45 +2342,335 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/20/CSS-Position/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="shell blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="shell blog">
+    <meta itemprop="description" content="一个萌新分享自己仅存的技术的地方">
+  </span>
   
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
     
-      <div class='post-wrapper'>
-        <article id="cat" class="post article white-box reveal shadow floatable blur">
-          <h2>所有分类</h2>
-          <div class="all-cats">
-            
-              
-                <a class="" href="/categories/Docker%E5%AD%A6%E4%B9%A0/">
-                  <span><i class='fa-solid fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;Docker学习</span>
-                  <span class="title">
-                    (2)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/MySQL/">
-                  <span><i class='fa-solid fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;MySQL</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/%E5%89%8D%E7%AB%AF/">
-                  <span><i class='fa-solid fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;前端</span>
-                  <span class="title">
-                    (3)
-                  </span>
-                </a>
-              
-            
-          </div>
-          <br>
+    
+    
+      <h1 class="title" itemprop="name headline">
+        CSS Position
+      </h1>
+      <div class='new-meta-box'>
+        
           
-        </article>
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://s1.vika.cn/space/2022/12/26/f53054a26250428485b151557f018012" class="lazyload" data-srcset="https://s1.vika.cn/space/2022/12/26/f53054a26250428485b151557f018012" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">sheep</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-20T14:02:35+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年2月20日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
     
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><blockquote>
+<p>position 属性指定了元素的定位类型</p>
+<p>其属性的值有：static、relative、absolute、fixed、sticky</p>
+<p>该元素可以使用的top，bottom，left和right属性定位</p>
+<p>然而，这些属性无法单独使用，除非是先设定position属性</p>
+<p>他们也有不同的生效方式，这取决于定位方法</p>
+</blockquote>
+<hr>
+<h2 id="static定位"><a href="#static定位" class="headerlink" title="static定位"></a><strong>static定位</strong></h2><blockquote>
+<p><strong>static</strong> 是<strong>position</strong>属性的默认值</p>
+<p>意思为“不开启定位”，即没有定位、遵循正常的文档流对象</p>
+<p>也不会受到top，bottom，left和right 这些偏移量的影响</p>
+</blockquote>
+<hr>
+<h2 id="relative-相对定位"><a href="#relative-相对定位" class="headerlink" title="relative - 相对定位"></a><strong>relative - 相对定位</strong></h2><blockquote>
+<p>当元素<strong>position</strong>属性值设置为<strong>relative</strong>时，则开启了元素的相对定位</p>
+<p>相对定位的<strong>特点</strong>：</p>
+<ol>
+<li>元素开启相对定位后，如果不设置偏移量的话，元素不会发生任何变化</li>
+<li>相对定位是参照开启定位的元素在文档流中的位置进行定位的</li>
+<li>相对定位会提升元素的层级</li>
+<li>相对定位不会使元素脱离文档流</li>
+<li>相对定位不会改变元素的性质</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="absolute-绝对定位"><a href="#absolute-绝对定位" class="headerlink" title="absolute - 绝对定位"></a><strong>absolute - 绝对定位</strong></h2><blockquote>
+<p>当元素<strong>position</strong>属性值设置为<strong>absolute</strong>时，则开启了元素的绝对定位</p>
+<p>绝对定位的<strong>特点</strong>：</p>
+<ol>
+<li>元素开启相对定位后，如果不设置偏移量的话，<strong>元素的位置</strong>不会发生变化</li>
+<li>开启绝对定位后，元素会从文档流中脱离出来</li>
+<li>绝对定位会<strong>改变元素的性质</strong>，行内变成块，块的宽高被内容撑开</li>
+<li>绝对定位会使元素提升一个层级</li>
+<li>绝对定位元素是相对于其包含块进行定位的</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="fixed-固定定位"><a href="#fixed-固定定位" class="headerlink" title="fixed - 固定定位"></a><strong>fixed - 固定定位</strong></h2><blockquote>
+<p>当元素<strong>position</strong>属性值设置为<strong>fixed</strong>时，则开启了元素的固定定位</p>
+<p>固定定位也是绝对定位的一种，所以固定定位的大部分特点和绝对定位一样</p>
+<ul>
+<li>唯一不同的是固定定位是参照与浏览器的视口来进行定位</li>
+<li>固定定位的元素不会随着网页的滚动条滚动</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="sticky-粘滞定位"><a href="#sticky-粘滞定位" class="headerlink" title="sticky - 粘滞定位"></a><strong>sticky - 粘滞定位</strong></h2><blockquote>
+<p>当元素<strong>position</strong>属性值设置为<strong>sticky</strong>时，则开启了元素的粘滞定位</p>
+<p>粘滞定位和相对定位的特点基本一致</p>
+<ul>
+<li>不同的是粘滞定位可以在元素到达某个位置时将其固定</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><blockquote>
+<p><strong>偏移量</strong></p>
+<ul>
+<li><p>当元素开启定位后，可以通过偏移量来设置元素的位置</p>
+<ol>
+<li><p>top：定位元素和定位位置上边的距离</p>
+<pre><code>top值越大，定位元素越向下移；越小则越向上移
+</code></pre>
+</li>
+<li><p>bottom：定位元素和定位位置下边的距离</p>
+<pre><code>bottom值越大，定位元素越向上移；越小则越向下移
+</code></pre>
+</li>
+<li><p>left：定位元素和定位位置左侧的距离</p>
+<pre><code>left值越大，定位元素越向右移；越小则越向左移
+</code></pre>
+</li>
+<li><p>right：定位元素和定位位置右侧的距离</p>
+<pre><code>right值越大，定位元素越向左移；越小则越向右移
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><p>定位元素的垂直方向的位置由top和bottom两个属性来控制</p>
+<p>​	- 通常情况下我们只会使用其中之一</p>
+</li>
+<li><p>定位元素的水平方向位置由left和right两个属性来控制</p>
+<p>​	- 通常情况下我们只会使用一个</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>包含块（Contains block）</strong></p>
+<ul>
+<li><p>正常情况下：</p>
+<pre><code>    ​	- 包含块就是离当前元素最近的祖先元素
+</code></pre>
+</li>
+<li><p>绝对定位的包含块：</p>
+<pre><code>    ​	- 就是离它最近的开启了定位的祖先元素
+</code></pre>
+<p>​	- 如果所有的祖先元素都没开启定位，则根元素就是它的包含块</p>
+</li>
+<li><p>html （根元素、初始包含块）</p>
+</li>
+</ul>
+</blockquote>
+
+  </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-20T14:07:50+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年2月20日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <span hidden itemprop="keywords">CSS</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/02/20/CSS-Position/&title=CSS Position - shell blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/02/20/CSS-Position/&title=CSS Position - shell blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/02/20/CSS-Position/&title=CSS Position - shell blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/02/19/BFC/'>
+          <p class='title'>BFC<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>BFC到底是什么东西
+BFC（Block Formatting Context）块级格式化上下文
+BFC是css中的一个隐含属性，开启BFC后，该元素会变成一个独立的布局区域
+元素开启BFC后的...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/02/20/CSS-Position/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2398,9 +2689,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#static%E5%AE%9A%E4%BD%8D"><span class="toc-text">static定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#relative-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-text">relative - 相对定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#absolute-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-text">absolute - 绝对定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fixed-%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D"><span class="toc-text">fixed - 固定定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sticky-%E7%B2%98%E6%BB%9E%E5%AE%9A%E4%BD%8D"><span class="toc-text">sticky - 粘滞定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-text">拓展</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2451,13 +2752,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3038,7 +3340,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"所有分类","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/categories/index.html"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/categories/index.html","wordCount":0,"datePublished":"2022-12-26T04:42:41.331Z","dateModified":"2022-12-26T04:42:41.331Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"一个萌新分享自己仅存的技术的地方"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"shell blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/02/20/CSS-Position/","name":"CSS Position"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"shell blog","url":"http://example.com/","keywords":null,"description":"一个萌新分享自己仅存的技术的地方","author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"一个萌新分享自己仅存的技术的地方"},"publisher":{"@type":"Organization","name":"shell blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS Position","description":"一个萌新分享自己仅存的技术的地方","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/02/20/CSS-Position/"},"author":{"@type":"Person","name":"sheep","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"shell blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/02/20/CSS-Position/","wordCount":0,"datePublished":"2023-02-20T06:02:35.000Z","dateModified":"2023-02-20T06:07:50.492Z","articleSection":"前端","keywords":"CSS","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
